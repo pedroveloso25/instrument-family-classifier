@@ -12,7 +12,7 @@ from its audio, using the [NSynth dataset](https://magenta.withgoogle.com/datase
 
 | Phase | What | Status |
 |---|---|---|
-| 0 | Audio fundamentals: waveform, STFT, mel-spectrogram | in progress |
+| 0 | Audio fundamentals: waveform, STFT, mel-spectrogram ([notebook](notebooks/00_audio_fundamentals.ipynb)) | done |
 | 1 | Dataset and leakage-free split (grouped by instrument) | — |
 | 2 | Baseline: aggregated MFCC statistics + classical model | — |
 | 3 | Small CNN on log-mel spectrograms (PyTorch, CPU) | — |
