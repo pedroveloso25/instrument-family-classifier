@@ -13,8 +13,8 @@ from its audio, using the [NSynth dataset](https://magenta.withgoogle.com/datase
 | Phase | What | Status |
 |---|---|---|
 | 0 | Audio fundamentals: waveform, STFT, mel-spectrogram ([notebook](notebooks/00_audio_fundamentals.ipynb)) | done |
-| 1 | Dataset and leakage-free split (grouped by instrument) | — |
-| 2 | Baseline: aggregated MFCC statistics + classical model | — |
+| 1 | Dataset and train/test split grouped by instrument ([notebook](notebooks/01_dataset_and_split.ipynb)) | done |
+| 2 | Baseline: MFCC mean/std + logistic regression ([notebook](notebooks/02_mfcc_baseline.ipynb)) — 0.19 balanced accuracy (chance 0.10) | done |
 | 3 | Small CNN on log-mel spectrograms (PyTorch, CPU) | — |
 | 4 | Evaluation, error analysis, write-up | — |
 
@@ -29,7 +29,21 @@ pip install -r requirements.txt
 ```
 
 Data: NSynth `valid` and `test` splits (json/wav, ~1.4 GB total), extracted into `data/raw/`.
-The 23.8 GB `train` split is intentionally not used (CPU-only hardware; see Phase 1 notes).
+The 23.8 GB `train` split is intentionally not used (CPU-only hardware).
+
+NSynth's `valid` and `test` contain the same 53 instruments, so they can't serve as train/test for each other.
+They are pooled and re-split by instrument: one instrument per family goes to test (10 instruments, 3,435 notes),
+the other 43 to train. The split is saved in [`splits/instruments.csv`](splits/instruments.csv); to regenerate it:
+
+```bash
+python -m src.dataset
+```
+
+The MFCC features used in Phase 2 are cached in `data/features/` (~6 min on CPU):
+
+```bash
+python -m src.features
+```
 
 ## License
 
