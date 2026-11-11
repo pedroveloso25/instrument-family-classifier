@@ -18,7 +18,7 @@ from its audio, using the [NSynth dataset](https://magenta.withgoogle.com/datase
 | 3 | Small CNN on log-mel spectrograms, PyTorch on CPU ([notebook](notebooks/03_cnn_logmel.ipynb)) — 0.30 balanced accuracy on the same test | done |
 | 4 | Evaluation and error analysis: baseline vs CNN, confounds, split variance ([notebook](notebooks/04_evaluation.ipynb)) | done |
 
-A study guide with every design decision, likely interview questions and a glossary is in [STUDY.md](STUDY.md).
+A study guide with every design decision and a glossary is in [STUDY.md](STUDY.md).
 
 Out of scope: source separation, large pretrained models, deployment, web UI.
 
