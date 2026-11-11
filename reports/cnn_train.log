@@ -1,0 +1,16 @@
+fit: 11291 notes / 36 instruments; val: 2048 notes / 7 instruments: ['bass_synthetic_098', 'brass_acoustic_016', 'guitar_acoustic_030', 'keyboard_electronic_001', 'organ_electronic_028', 'reed_acoustic_018', 'string_acoustic_012']
+loaded (11291, 128, 126) + (2048, 128, 126) in 10 s
+98,682 parameters, 10 threads
+epoch  1  train loss 1.528 acc 0.373  val loss 2.026 bacc 0.493 *  (74 s train, 80 s total)
+epoch  2  train loss 0.943 acc 0.598  val loss 1.580 bacc 0.424  (100 s train, 107 s total)
+epoch  3  train loss 0.679 acc 0.710  val loss 1.929 bacc 0.523 *  (106 s train, 115 s total)
+epoch  4  train loss 0.545 acc 0.774  val loss 1.428 bacc 0.555 *  (127 s train, 138 s total)
+epoch  5  train loss 0.448 acc 0.810  val loss 1.753 bacc 0.551  (127 s train, 136 s total)
+epoch  6  train loss 0.364 acc 0.841  val loss 2.071 bacc 0.584 *  (135 s train, 146 s total)
+epoch  7  train loss 0.330 acc 0.851  val loss 1.883 bacc 0.552  (139 s train, 151 s total)
+epoch  8  train loss 0.283 acc 0.868  val loss 2.271 bacc 0.483  (146 s train, 156 s total)
+epoch  9  train loss 0.248 acc 0.886  val loss 2.091 bacc 0.553  (122 s train, 132 s total)
+epoch 10  train loss 0.225 acc 0.895  val loss 2.308 bacc 0.531  (140 s train, 150 s total)
+epoch 11  train loss 0.215 acc 0.904  val loss 2.136 bacc 0.562  (126 s train, 136 s total)
+early stopping: no improvement for 5 epochs
+best val balanced accuracy 0.584 at epoch 6; checkpoint models\cnn_logmel.pt; 24.1 min
